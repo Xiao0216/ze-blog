@@ -16,8 +16,8 @@
 - Create `package.json`: pin Hexo, Stellar, feed, sitemap, search, renderer, and server dependencies.
 - Create `_config.yml`: Hexo site config, permalink, feed, sitemap, search, generators.
 - Create `_config.stellar.yml`: Stellar menu, sidebar, search, comments-disabled config, footer, colors.
-- Create `scripts/publish-local.sh`: build and sync `public/` to `/var/www/zblog`.
-- Create `scripts/smoke-test.sh`: verify generated files and key content after `npm run build`.
+- Create `bin/publish-local.sh`: build and sync `public/` to `/var/www/zblog`.
+- Create `bin/smoke-test.sh`: verify generated files and key content after `npm run build`.
 - Create `source/about/index.md`, `source/projects/index.md`, `source/notes/index.md`, `source/404.md`: core pages.
 - Create `source/_posts/*.md`: initial blog posts.
 - Create `source/_data/wiki.yml` and `source/_data/wiki/*.yml`: Stellar wiki registry and trees.
@@ -33,7 +33,7 @@
 **Files:**
 - Create: `.gitignore`
 - Create: `package.json`
-- Create: `scripts/publish-local.sh`
+- Create: `bin/publish-local.sh`
 
 - [ ] **Step 1: Create `.gitignore`**
 
@@ -66,8 +66,11 @@ Use `apply_patch`:
     "clean": "hexo clean",
     "build": "hexo clean && hexo generate",
     "server": "hexo server --host 0.0.0.0 --port 4000",
-    "smoke": "bash scripts/smoke-test.sh",
-    "publish:local": "bash scripts/publish-local.sh"
+    "smoke": "bash bin/smoke-test.sh",
+    "publish:local": "bash bin/publish-local.sh"
+  },
+  "hexo": {
+    "version": "7.3.0"
   },
   "dependencies": {
     "hexo": "7.3.0",
@@ -87,7 +90,7 @@ Use `apply_patch`:
 }
 ```
 
-- [ ] **Step 3: Create `scripts/publish-local.sh`**
+- [ ] **Step 3: Create `bin/publish-local.sh`**
 
 Use `apply_patch`:
 
@@ -111,7 +114,7 @@ find "$publish_root" -type f -exec chmod 0644 {} \;
 Run:
 
 ```bash
-chmod +x scripts/publish-local.sh
+chmod +x bin/publish-local.sh
 ```
 
 Expected: command exits with status 0.
@@ -142,7 +145,7 @@ Expected: `npx hexo version` prints Hexo `7.3.0`; `npm ls` shows `hexo-theme-ste
 Run:
 
 ```bash
-git add .gitignore package.json package-lock.json scripts/publish-local.sh
+git add .gitignore package.json package-lock.json bin/publish-local.sh
 git commit -m "chore: scaffold hexo stellar project"
 ```
 
@@ -987,7 +990,7 @@ Expected: commit succeeds.
 ### Task 5: Generated Site Smoke Test
 
 **Files:**
-- Create: `scripts/smoke-test.sh`
+- Create: `bin/smoke-test.sh`
 
 - [ ] **Step 1: Write the smoke test**
 
@@ -1033,7 +1036,7 @@ grep -R "Hexo" public/search.json >/dev/null
 Run:
 
 ```bash
-chmod +x scripts/smoke-test.sh
+chmod +x bin/smoke-test.sh
 ```
 
 Expected: command exits with status 0.
@@ -1054,7 +1057,7 @@ Expected: both commands exit with status 0.
 Run:
 
 ```bash
-git add scripts/smoke-test.sh
+git add bin/smoke-test.sh
 git commit -m "test: add static site smoke test"
 ```
 
@@ -1154,11 +1157,11 @@ Expected: first command prints a matching line; second command returns HTTP 200.
 Run:
 
 ```bash
-git add ops/nginx/zblog.wenshuai.site.conf scripts/publish-local.sh
+git add ops/nginx/zblog.wenshuai.site.conf bin/publish-local.sh
 git commit -m "chore: add local publish and nginx config"
 ```
 
-Expected: commit succeeds. If `scripts/publish-local.sh` is unchanged from Task 1, commit only `ops/nginx/zblog.wenshuai.site.conf`.
+Expected: commit succeeds. If `bin/publish-local.sh` is unchanged from Task 1, commit only `ops/nginx/zblog.wenshuai.site.conf`.
 
 ### Task 7: Public Verification
 
