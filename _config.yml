@@ -1,0 +1,95 @@
+title: 猫博士(縉紳)
+subtitle: 赛博书房里的技术、AI 与长期笔记
+description: 猫博士(縉紳) 的个人赛博书房，记录 AI 工具、服务器、自动化、建站和长期知识笔记。
+keywords: AI, 技术博客, 服务器, 自动化, Hexo, Stellar, 猫博士, 縉紳
+author: 猫博士(縉紳)
+avatar: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
+favicon: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://zblog.wenshuai.site
+root: /
+permalink: posts/:year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+source_dir: source
+public_dir: public
+tag_dir: blog/tags
+archive_dir: blog/archives
+category_dir: blog/categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true
+category_generator:
+  per_page: 20
+tag_generator:
+  per_page: 20
+
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: mtime
+
+per_page: 10
+pagination_dir: page
+
+theme: stellar
+
+deploy:
+  type: ''
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: /favicon.svg
+  autodiscovery: true
+
+sitemap:
+  path: sitemap.xml
+
+search:
+  path: search.json
+  field: all
+  content: true

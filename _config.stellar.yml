@@ -1,0 +1,208 @@
+canonical:
+  closeEnable: true
+  closeText: 关闭提示
+  originalHost: zblog.wenshuai.site
+  officialHosts:
+    - zblog.wenshuai.site
+    - localhost
+
+open_graph:
+  enable: true
+  twitter_id:
+
+structured_data:
+  links:
+    - https://zblog.wenshuai.site/
+
+logo:
+  avatar: '[{config.avatar}](/about/)'
+  title: '[{config.title}](/)'
+  subtitle: '{config.subtitle}'
+
+menubar:
+  columns: 3
+  items:
+    - id: post
+      theme: '#1BCDFC'
+      icon: solar:documents-bold-duotone
+      title: 博客
+      url: /blog/
+    - id: wiki
+      theme: '#3DC550'
+      icon: solar:notebook-bookmark-bold-duotone
+      title: 知识库
+      url: /wiki/
+    - id: projects
+      theme: '#FFB000'
+      icon: solar:case-round-bold-duotone
+      title: 项目
+      url: /projects/
+    - id: notes
+      theme: '#9C6BFF'
+      icon: solar:chat-square-code-bold-duotone
+      title: 碎碎念
+      url: /notes/
+    - id: about
+      theme: '#F44336'
+      icon: solar:user-id-bold-duotone
+      title: 关于
+      url: /about/
+    - id: rss
+      theme: '#FA6400'
+      icon: solar:rss-bold
+      title: RSS
+      url: /atom.xml
+
+site_tree:
+  home:
+    leftbar: welcome, recent
+    rightbar:
+  index_blog:
+    base_dir: blog
+    menu_id: post
+    leftbar: welcome, recent
+    rightbar:
+  index_wiki:
+    base_dir: wiki
+    menu_id: wiki
+    leftbar: related, recent
+    rightbar:
+  post:
+    menu_id: post
+    leftbar: related, recent
+    rightbar: toc
+  wiki:
+    menu_id: wiki
+    leftbar: tree, related, recent
+    rightbar: toc
+  page:
+    leftbar: recent
+    rightbar: toc
+  error_page:
+    menu_id: post
+    '404': /404.html
+    leftbar: recent
+    rightbar:
+
+article:
+  type: tech
+  auto_banner: false
+  auto_excerpt: 160
+  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  share: [wechat, email, link]
+  related_posts:
+    enable: false
+
+search:
+  service: local_search
+  local_search:
+    field: all
+    path: /search.json
+    content: true
+    skip_search:
+
+comments:
+  service:
+  comment_title: 讨论区
+  lazyload: false
+  giscus:
+    src: https://giscus.app/client.js
+    data-repo:
+    data-repo-id:
+    data-category:
+    data-category-id:
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: top
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    crossorigin: anonymous
+  twikoo:
+    js: https://gcore.jsdelivr.net/npm/twikoo@1.6/dist/twikoo.all.min.js
+    envId:
+  waline:
+    js: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline.js
+    css: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline.css
+    serverURL:
+  artalk:
+    css: https://unpkg.com/artalk@2.9/dist/artalk.css
+    js: https://unpkg.com/artalk@2.9/dist/artalk.js
+    server:
+    site: ''
+
+footer:
+  social:
+    rss:
+      icon: '<img src="https://api.iconify.design/solar:rss-bold.svg"/>'
+      url: /atom.xml
+  sitemap:
+    - title: 内容
+      items:
+        - '[博客](/blog/)'
+        - '[分类](/blog/categories/)'
+        - '[标签](/blog/tags/)'
+        - '[归档](/blog/archives/)'
+    - title: 书房
+      items:
+        - '[知识库](/wiki/)'
+        - '[项目](/projects/)'
+        - '[碎碎念](/notes/)'
+        - '[关于](/about/)'
+  content: |
+    © 2026 猫博士(縉紳)。本站由 Hexo 与 Stellar 生成，作为一间长期维护的赛博书房。
+
+plugins:
+  preload:
+    enable: true
+    service: flying_pages
+  pjax:
+    enable: false
+  copycode:
+    enable: true
+    default_text: Copy
+    success_text: Copied
+    toast: 复制成功
+  heti:
+    enable: false
+
+style:
+  prefers_theme: auto
+  smooth_scroll: true
+  font-size:
+    root: 16px
+    body: 17px
+    code: 85%
+    codeblock: 0.8125rem
+  font-family:
+    body: 'system-ui, "Microsoft Yahei", "Segoe UI", Arial, sans-serif'
+    code: 'Menlo, Monaco, Consolas, system-ui, monospace, sans-serif'
+    codeblock: 'Menlo, Monaco, Consolas, system-ui, monospace, sans-serif'
+  text-align: left
+  color:
+    theme: 'hsl(192 88% 48%)'
+    accent: 'hsl(38 90% 52%)'
+    link: 'hsl(207 82% 52%)'
+  leftbar:
+    background-color-light: var(--card)
+    background-color-dark: var(--card)
+    background-image:
+    blur-px: 80px
+    blur-bg: var(--bg-a60)
+    background-opacity: 0.88
+  site:
+    blur-px: 80px
+    blur-bg: var(--bg-a75)
+    blur-sat: 180%
+  header_prefix:
+    h2: '#'
+    h3: '='
+    h4: '|'
+    h5: ':'
+
+default:
+  avatar: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
+  cover: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg
+  image: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg
+  banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
