@@ -498,6 +498,7 @@ Expected: commit succeeds.
 ### Task 3: Core Pages and Initial Posts
 
 **Files:**
+- Create: `source/index.md`
 - Create: `source/about/index.md`
 - Create: `source/projects/index.md`
 - Create: `source/notes/index.md`
@@ -510,6 +511,36 @@ Expected: commit succeeds.
 - [ ] **Step 1: Create core pages**
 
 Use `apply_patch` with these files:
+
+`source/index.md`:
+
+```markdown
+---
+title: 猫博士(縉紳)
+date: 2026-04-29 11:55:00
+layout: page
+menu_id: post
+---
+
+# 猫博士(縉紳)
+
+这里是我的赛博书房。技术、AI、服务器和长期笔记会在这里慢慢归档。
+
+## 入口
+
+- [博客](/blog/)：完整文章、建站记录、服务器手札和 AI 工具观察。
+- [知识库](/wiki/)：更稳定的专题整理，适合长期复用。
+- [项目](/projects/)：正在维护的实验、工具和服务。
+- [碎碎念](/notes/)：短记录、现场判断和还没成文的想法。
+
+## 最近的方向
+
+我会先把这个站作为工作台使用：记录服务器如何整理，AI 工具如何进入真实流程，以及静态博客如何稳定发布到 Cloudflare 后面。
+
+如果你第一次来到这里，可以从《开卷：猫博士的赛博书房》开始。
+```
+
+`source/about/index.md`:
 
 ```markdown
 ---
@@ -732,6 +763,8 @@ Run:
 
 ```bash
 npm run build
+test -f public/index.html
+test -f public/blog/index.html
 test -f public/about/index.html
 test -f public/projects/index.html
 test -f public/notes/index.html
@@ -748,7 +781,7 @@ Expected: build exits with status 0 and every `test -f` exits with status 0.
 Run:
 
 ```bash
-git add source/about source/projects source/notes source/404.md source/_posts
+git add source/index.md source/about source/projects source/notes source/404.md source/_posts
 git commit -m "feat: add initial cat doctor content"
 ```
 
