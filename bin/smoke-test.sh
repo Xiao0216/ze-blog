@@ -11,6 +11,7 @@ required_files=(
   "public/wiki/ai-workflow/index.html"
   "public/wiki/server-notes/index.html"
   "public/wiki/site-building/index.html"
+  "public/posts/2026/04/29/2026-04-29-opening-cyber-study/index.html"
   "public/atom.xml"
   "public/sitemap.xml"
   "public/search.json"
@@ -37,6 +38,7 @@ assert_contains() {
 
 assert_contains "home/about branding" "猫博士" public/index.html public/about/index.html
 assert_contains "site slogan" "赛博书房" public/index.html public/about/index.html public/posts
+assert_contains "opening post link" "/posts/2026/04/29/2026-04-29-opening-cyber-study/" public/index.html
 assert_contains "wiki ai workflow" "AI 工作流" public/wiki/index.html public/wiki/ai-workflow/index.html
 assert_contains "wiki server notes" "服务器手札" public/wiki/index.html public/wiki/server-notes/index.html
 assert_contains "wiki site building" "建站笔记" public/wiki/index.html public/wiki/site-building/index.html
