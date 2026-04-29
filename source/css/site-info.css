@@ -45,6 +45,9 @@
   --ts-paper: #171411;
   --ts-card: #211c18;
   --ts-ink: #f3eadf;
+  --ts-rust: #d98568;
+  --ts-teal: #8fc2c8;
+  --ts-olive: #c3c89a;
   --ts-muted: #b7a999;
   --ts-line: rgba(211, 153, 50, 0.22);
   --ts-line-soft: rgba(227, 216, 198, 0.13);
@@ -79,6 +82,9 @@
     --ts-paper: #171411;
     --ts-card: #211c18;
     --ts-ink: #f3eadf;
+    --ts-rust: #d98568;
+    --ts-teal: #8fc2c8;
+    --ts-olive: #c3c89a;
     --ts-muted: #b7a999;
     --ts-line: rgba(211, 153, 50, 0.22);
     --ts-line-soft: rgba(227, 216, 198, 0.13);
@@ -157,6 +163,13 @@ body > .sitebg .siteblur {
 
 :root[data-theme="dark"] .widget-wrapper.markdown .widget-body {
   background: rgba(33, 28, 24, 0.84);
+}
+
+:root[data-theme="dark"] .md-text .highlight,
+:root[data-theme="dark"] pre:not([class]):has(> code) {
+  background: rgba(227, 216, 198, 0.08);
+  border-color: var(--ts-line-soft);
+  box-shadow: none;
 }
 
 .logo-wrap a.title .main {
@@ -462,5 +475,12 @@ pre:not([class]):has(> code) {
 
   :root:not([data-theme="light"]) .widget-wrapper.markdown .widget-body {
     background: rgba(33, 28, 24, 0.84);
+  }
+
+  :root:not([data-theme="light"]) .md-text .highlight,
+  :root:not([data-theme="light"]) pre:not([class]):has(> code) {
+    background: rgba(227, 216, 198, 0.08);
+    border-color: var(--ts-line-soft);
+    box-shadow: none;
   }
 }
