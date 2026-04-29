@@ -155,6 +155,10 @@ body > .sitebg .siteblur {
   background: rgba(33, 28, 24, 0.84);
 }
 
+:root[data-theme="dark"] .widget-wrapper.markdown .widget-body {
+  background: rgba(33, 28, 24, 0.84);
+}
+
 .logo-wrap a.title .main {
   color: var(--ts-rust);
 }
@@ -323,8 +327,12 @@ body > .sitebg .siteblur {
   overflow: hidden;
 }
 
-.article.banner .content .title {
+.article.banner > .content .title {
   color: var(--ts-rust);
+}
+
+.article.banner .bg + .content .title {
+  color: var(--text-banner);
 }
 
 .md-text.content {
@@ -443,5 +451,16 @@ pre:not([class]):has(> code) {
 
   .md-text.content {
     padding: 1rem 1rem 1.75rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .l_body .l_left .leftbar-container,
+  :root:not([data-theme="light"]) .l_body .l_right {
+    background: rgba(33, 28, 24, 0.84);
+  }
+
+  :root:not([data-theme="light"]) .widget-wrapper.markdown .widget-body {
+    background: rgba(33, 28, 24, 0.84);
   }
 }
