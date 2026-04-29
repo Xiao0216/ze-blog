@@ -11,7 +11,8 @@
     "build": "hexo clean && hexo generate",
     "server": "hexo server --host 0.0.0.0 --port 4000",
     "publish:local": "bash bin/publish-local.sh",
-    "smoke": "bash bin/smoke-test.sh"
+    "smoke": "bash bin/smoke-test.sh",
+    "smoke:nginx": "bash bin/nginx-smoke-test.sh"
   },
   "dependencies": {
     "hexo": "7.3.0",

@@ -4,7 +4,7 @@ description: 猫博士(縉紳) 的个人赛博书房，记录 AI 工具、服务
 keywords: AI, 技术博客, 服务器, 自动化, Hexo, Stellar, 猫博士, 縉紳
 author: 猫博士(縉紳)
 avatar: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
-favicon: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
+favicon: /favicon.svg
 language: zh-CN
 timezone: Asia/Shanghai
 
