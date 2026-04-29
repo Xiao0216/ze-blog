@@ -214,7 +214,7 @@ prismjs:
   tab_replace: ''
 
 index_generator:
-  path: ''
+  path: blog
   per_page: 10
   order_by: -date
 archive_generator:
@@ -300,22 +300,22 @@ menubar:
       url: /wiki/
     - id: projects
       theme: '#FFB000'
-      icon: solar:case-round-bold-duotone
+      icon: solar:planet-bold-duotone
       title: 项目
       url: /projects/
     - id: notes
       theme: '#9C6BFF'
-      icon: solar:chat-square-code-bold-duotone
+      icon: solar:chat-square-like-bold-duotone
       title: 碎碎念
       url: /notes/
     - id: about
       theme: '#F44336'
-      icon: solar:user-id-bold-duotone
+      icon: solar:chat-square-like-bold-duotone
       title: 关于
       url: /about/
     - id: rss
       theme: '#FA6400'
-      icon: solar:rss-bold
+      icon: solar:documents-bold-duotone
       title: RSS
       url: /atom.xml
 
@@ -401,7 +401,7 @@ comments:
 footer:
   social:
     rss:
-      icon: '<img src="https://api.iconify.design/solar:rss-bold.svg"/>'
+      icon: solar:documents-bold-duotone
       url: /atom.xml
   sitemap:
     - title: 内容
