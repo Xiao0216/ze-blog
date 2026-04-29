@@ -4,8 +4,6 @@ date: 2026-04-29 13:25:00
 wiki: site-building
 ---
 
-# Hexo + Stellar 第一版配置
-
 第一版配置分成两层：
 
 - `_config.yml` 保存 Hexo 站点信息、生成器、RSS、sitemap 和 search 输出。
