@@ -20,7 +20,7 @@
 - Create `bin/smoke-test.sh`: verify generated files and key content after `npm run build`.
 - Create `source/about/index.md`, `source/projects/index.md`, `source/notes/index.md`, `source/404.md`: core pages.
 - Create `source/_posts/*.md`: initial blog posts.
-- Create `source/_data/wiki.yml` and `source/_data/wiki/*.yml`: Stellar wiki registry and trees.
+- Create `source/_data/wiki.yml` and `source/_data/wiki/*.yml`: Stellar wiki shelf list plus project trees.
 - Create `source/wiki/**.md`: initial wiki content.
 - Create `ops/nginx/zblog.wenshuai.site.conf`: versioned Nginx site config.
 - Modify `/etc/nginx/sites-available/zblog.wenshuai.site.conf`: copy the versioned config during deployment.
@@ -808,18 +808,9 @@ Use `apply_patch`:
 `source/_data/wiki.yml`:
 
 ```yaml
-ai-workflow:
-  title: AI 工作流
-  description: 把 AI 工具放进真实工作台的记录。
-  order: 1
-server-notes:
-  title: 服务器手札
-  description: Linux、Nginx、Cloudflare 与部署记录。
-  order: 2
-site-building:
-  title: 建站笔记
-  description: Hexo、Stellar、内容组织和发布流程。
-  order: 3
+- ai-workflow
+- server-notes
+- site-building
 ```
 
 `source/_data/wiki/ai-workflow.yml`:
@@ -827,7 +818,7 @@ site-building:
 ```yaml
 title: AI 工作流
 description: 把 AI 工具放进真实工作台的记录。
-icon: solar:magic-stick-3-bold-duotone
+icon: solar:planet-bold-duotone
 base_dir: /wiki/ai-workflow/
 order: 1
 tree:
@@ -840,7 +831,7 @@ tree:
 ```yaml
 title: 服务器手札
 description: Linux、Nginx、Cloudflare 与部署记录。
-icon: solar:server-square-cloud-bold-duotone
+icon: solar:documents-bold-duotone
 base_dir: /wiki/server-notes/
 order: 2
 tree:
@@ -853,7 +844,7 @@ tree:
 ```yaml
 title: 建站笔记
 description: Hexo、Stellar、内容组织和发布流程。
-icon: solar:document-add-bold-duotone
+icon: solar:notebook-bookmark-bold-duotone
 base_dir: /wiki/site-building/
 order: 3
 tree:

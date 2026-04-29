@@ -1,0 +1,8 @@
+title: 服务器手札
+description: Linux、Nginx、Cloudflare 与部署记录。
+icon: solar:documents-bold-duotone
+base_dir: /wiki/server-notes/
+order: 2
+tree:
+  - index
+  - nginx-cloudflare
