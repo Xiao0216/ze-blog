@@ -1,8 +1,9 @@
 title: 服务器手札
+name: 服务器手札
 description: Linux、Nginx、Cloudflare 与部署记录。
-icon: solar:documents-bold-duotone
+icon: https://api.iconify.design/solar:documents-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/server-notes/
-order: 2
+sort: 2
 tree:
   - index
   - nginx-cloudflare

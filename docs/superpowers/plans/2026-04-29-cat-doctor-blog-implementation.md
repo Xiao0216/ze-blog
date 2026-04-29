@@ -817,10 +817,11 @@ Use `apply_patch`:
 
 ```yaml
 title: AI 工作流
+name: AI 工作流
 description: 把 AI 工具放进真实工作台的记录。
-icon: solar:planet-bold-duotone
+icon: https://api.iconify.design/solar:planet-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/ai-workflow/
-order: 1
+sort: 1
 tree:
   - index
   - prompt-workflow
@@ -830,10 +831,11 @@ tree:
 
 ```yaml
 title: 服务器手札
+name: 服务器手札
 description: Linux、Nginx、Cloudflare 与部署记录。
-icon: solar:documents-bold-duotone
+icon: https://api.iconify.design/solar:documents-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/server-notes/
-order: 2
+sort: 2
 tree:
   - index
   - nginx-cloudflare
@@ -843,10 +845,11 @@ tree:
 
 ```yaml
 title: 建站笔记
+name: 建站笔记
 description: Hexo、Stellar、内容组织和发布流程。
-icon: solar:notebook-bookmark-bold-duotone
+icon: https://api.iconify.design/solar:notebook-bookmark-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/site-building/
-order: 3
+sort: 3
 tree:
   - index
   - hexo-stellar

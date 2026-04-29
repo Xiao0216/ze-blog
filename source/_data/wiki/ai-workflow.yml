@@ -1,8 +1,9 @@
 title: AI 工作流
+name: AI 工作流
 description: 把 AI 工具放进真实工作台的记录。
-icon: solar:planet-bold-duotone
+icon: https://api.iconify.design/solar:planet-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/ai-workflow/
-order: 1
+sort: 1
 tree:
   - index
   - prompt-workflow

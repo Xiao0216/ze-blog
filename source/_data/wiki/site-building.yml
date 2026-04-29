@@ -1,8 +1,9 @@
 title: 建站笔记
+name: 建站笔记
 description: Hexo、Stellar、内容组织和发布流程。
-icon: solar:notebook-bookmark-bold-duotone
+icon: https://api.iconify.design/solar:notebook-bookmark-bold-duotone.svg?color=%231bcdfc
 base_dir: /wiki/site-building/
-order: 3
+sort: 3
 tree:
   - index
   - hexo-stellar
