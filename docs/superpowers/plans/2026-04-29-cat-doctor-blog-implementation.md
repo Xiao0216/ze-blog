@@ -66,7 +66,6 @@ Use `apply_patch`:
     "clean": "hexo clean",
     "build": "hexo clean && hexo generate",
     "server": "hexo server --host 0.0.0.0 --port 4000",
-    "smoke": "bash bin/smoke-test.sh",
     "publish:local": "bash bin/publish-local.sh"
   },
   "hexo": {
@@ -1046,6 +1045,7 @@ Expected: command exits with status 0.
 Run:
 
 ```bash
+npm pkg set scripts.smoke="bash bin/smoke-test.sh"
 npm run build
 npm run smoke
 ```
@@ -1057,7 +1057,7 @@ Expected: both commands exit with status 0.
 Run:
 
 ```bash
-git add bin/smoke-test.sh
+git add package.json package-lock.json bin/smoke-test.sh
 git commit -m "test: add static site smoke test"
 ```
 
