@@ -1,0 +1,45 @@
+name: Feed Posts Parser
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * *'
+
+jobs:
+  feed-parser:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Feed Post Parser
+        uses: xaoxuu/feed-posts-parser@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          posts_count: 3
+
+      - name: Generate data.json
+        uses: xaoxuu/issues2json@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          sort: 'posts-desc'
+          exclude_issue_with_labels: '审核中, 风险网站, 失联, 长期失联'
+          hide_labels: '白名单'
+
+      - name: Setup Git Config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and Push to output branch
+        run: |
+          git fetch origin output || true
+          git checkout -B output
+          git add --all
+          git commit -m "Update data from issues" || echo "No changes to commit"
+          git push -f origin output

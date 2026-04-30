@@ -1,0 +1,15 @@
+name: Data Migration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  friends-data-migration:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Friends Data Migration
+        uses: xaoxuu/friends-data-migration@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
