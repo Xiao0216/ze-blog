@@ -10,6 +10,6 @@ jobs:
       issues: write
     steps:
       - name: Friends Data Migration
-        uses: xaoxuu/friends-data-migration@main
+        uses: xaoxuu/friends-data-migration@3fdd2e9588c0b7673f1280dab7d02c00752f387b
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

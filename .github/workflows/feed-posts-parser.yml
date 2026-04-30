@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 21 * * *'
 
+concurrency:
+  group: friends-output
+  cancel-in-progress: false
+
 jobs:
   feed-parser:
     runs-on: ubuntu-latest
@@ -13,17 +17,17 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
 
       - name: Run Feed Post Parser
-        uses: xaoxuu/feed-posts-parser@main
+        uses: xaoxuu/feed-posts-parser@0107be40bed6ec4924d5e541ccce935dfbaa1507
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           posts_count: 3
 
       - name: Generate data.json
-        uses: xaoxuu/issues2json@main
+        uses: xaoxuu/issues2json@7aba0f1e8c5005c41f6b1612b8d5e0e598b3b723
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
