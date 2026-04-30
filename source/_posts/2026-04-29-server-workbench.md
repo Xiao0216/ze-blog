@@ -8,6 +8,7 @@ tags:
   - Cloudflare
   - 部署
 description: 一台服务器要稳定承载多个小服务，关键是入口、目录、权限和验证流程清晰。
+cover: https://w.wallhaven.cc/full/g8/wallhaven-g8r373.png
 ---
 
 服务器不是只要能跑就算完成。真正可维护的服务器，应该能让下一个改动很快找到边界。

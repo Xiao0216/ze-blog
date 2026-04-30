@@ -8,60 +8,68 @@ canonical:
 
 open_graph:
   enable: true
-  twitter_id:
 
 structured_data:
   links:
     - https://zblog.wenshuai.site/
 
+stellar:
+  main_css_version: 20260429-xaoxuu-pjax1
+
+preconnect:
+  - https://res.xaox.cc
+  - https://npm.elemecdn.com
+  - https://gcore.jsdelivr.net
+  - https://zblog.wenshuai.site
+
 logo:
   avatar: '[{config.avatar}](/about/)'
   title: '[{config.title}](/)'
-  subtitle: '{config.subtitle}'
+  subtitle: 'Zodiac Zest | 本心热忱'
 
 menubar:
-  columns: 3
+  columns: 4
   items:
     - id: post
       theme: '#1BCDFC'
-      icon: solar:documents-bold-duotone
+      icon: >-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M1 12c0-3.75 0-5.625.955-6.939A5 5 0 0 1 3.06 3.955C4.375 3 6.251 3 10 3h4c3.75 0 5.625 0 6.939.955a5 5 0 0 1 1.106 1.106C23 6.375 23 8.251 23 12s0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C19.625 21 17.749 21 14 21h-4c-3.75 0-5.625 0-6.939-.955a5 5 0 0 1-1.106-1.106C1 17.625 1 15.749 1 12" opacity=".5"/><path fill="currentColor" d="M12.75 3a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0zM8 9.75a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm0 3.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5z"/></svg>
       title: 博客
-      url: /blog/
+      url: /
     - id: wiki
       theme: '#3DC550'
-      icon: solar:notebook-bookmark-bold-duotone
-      title: 知识库
-      url: /wiki/
-    - id: projects
-      theme: '#FFB000'
-      icon: solar:planet-bold-duotone
+      icon: >-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 8c0-2.828 0-4.243.879-5.121C4.757 2 6.172 2 9 2h6c2.828 0 4.243 0 5.121.879C21 3.757 21 5.172 21 8v8c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22H9c-2.828 0-4.243 0-5.121-.879C3 20.243 3 18.828 3 16z" opacity=".5"/><path fill="currentColor" fill-rule="evenodd" d="M8.75 2.012v20h-1.5v-20zM1.25 8A.75.75 0 0 1 2 7.25h2a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8m0 4a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m0 4a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/><path fill="currentColor" d="M10.75 6.5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75m0 3.5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75"/></svg>
       title: 项目
-      url: /projects/
-    - id: notes
-      theme: '#9C6BFF'
-      icon: solar:chat-square-like-bold-duotone
-      title: 碎碎念
+      url: /wiki/
+    - id: explore
+      theme: '#FA6400'
+      icon: >-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.675 8.594C3.432 9.359 2 10.523 2 11.827c0 1.207 1.23 2.296 3.195 3.058l-1.338 2.23a.75.75 0 0 0 1.286.771l1.5-2.5l.017-.03c1.347.356 2.91.58 4.59.633V19a.75.75 0 0 0 1.5 0v-3.01c1.68-.052 3.243-.278 4.59-.633l.017.03l1.5 2.5a.75.75 0 1 0 1.286-.771l-1.338-2.23C20.77 14.123 22 13.035 22 11.826c0-1.303-1.432-2.467-3.675-3.232c-.124.29-.331.584-.668.818C16.869 9.96 15.3 10.5 12 10.5s-4.868-.54-5.657-1.088a1.9 1.9 0 0 1-.668-.818M13 13a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2m11-1a1 1 0 1 1-2 0a1 1 0 0 1 2 0" clip-rule="evenodd"/><path fill="currentColor" d="M7.055 8.005A4.73 4.73 0 0 1 11.73 4h.542a4.73 4.73 0 0 1 4.674 4.005a.43.43 0 0 1-.145.175c-.414.288-1.61.82-4.8.82s-4.386-.532-4.8-.82a.43.43 0 0 1-.145-.175" opacity=".5"/></svg>
+      title: 探索
       url: /notes/
-    - id: about
+    - id: social
       theme: '#F44336'
       icon: solar:chat-square-like-bold-duotone
-      title: 关于
-      url: /about/
-    - id: rss
-      theme: '#FA6400'
-      icon: solar:documents-bold-duotone
-      title: RSS
-      url: /atom.xml
+      title: 社交
+      url: /friends/
+
+inject:
+  head:
+    - '<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">'
 
 site_tree:
   home:
     leftbar: welcome, recent
-    rightbar:
+    rightbar: site_memo
   index_blog:
     base_dir: blog
     menu_id: post
     leftbar: welcome, recent
-    rightbar:
+    rightbar: site_memo
+  index_topic:
+    base_dir: topic
+    menu_id: post
   index_wiki:
     base_dir: wiki
     menu_id: wiki
@@ -71,9 +79,23 @@ site_tree:
     menu_id: post
     leftbar: related, recent
     rightbar: toc
+  topic:
+    menu_id: post
   wiki:
     menu_id: wiki
     leftbar: tree, related, recent
+    rightbar: toc
+  notebooks:
+    base_dir: notebooks
+    menu_id: explore
+    leftbar: recent
+    rightbar:
+  notes:
+    menu_id: explore
+    leftbar: tagtree, recent
+    rightbar:
+  note:
+    leftbar: tagtree, recent
     rightbar: toc
   page:
     leftbar: recent
@@ -87,9 +109,8 @@ site_tree:
 article:
   type: tech
   auto_banner: false
-  auto_excerpt: 160
+  auto_excerpt: 128
   license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
-  share: [wechat, email, link]
   related_posts:
     enable: false
 
@@ -103,62 +124,50 @@ search:
 
 comments:
   service:
-  comment_title: 讨论区
+  comment_title: 快来参与讨论吧~
   lazyload: false
-  giscus:
-    src: https://giscus.app/client.js
-    data-repo:
-    data-repo-id:
-    data-category:
-    data-category-id:
-    data-mapping: pathname
-    data-strict: 0
-    data-reactions-enabled: 1
-    data-emit-metadata: 0
-    data-input-position: top
-    data-theme: preferred_color_scheme
-    data-lang: zh-CN
-    crossorigin: anonymous
-  twikoo:
-    js: https://gcore.jsdelivr.net/npm/twikoo@1.6/dist/twikoo.all.min.js
-    envId:
-  waline:
-    js: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline.js
-    css: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline.css
-    serverURL:
-  artalk:
-    css: https://unpkg.com/artalk@2.9/dist/artalk.css
-    js: https://unpkg.com/artalk@2.9/dist/artalk.js
-    server:
-    site: ''
 
 footer:
   social:
-    rss:
-      icon: solar:documents-bold-duotone
-      url: /atom.xml
   sitemap:
-    - title: 内容
+    - title: 博客
       items:
-        - '[博客](/blog/)'
+        - '[近期发布](/)'
         - '[分类](/blog/categories/)'
         - '[标签](/blog/tags/)'
         - '[归档](/blog/archives/)'
-    - title: 书房
+    - title: 项目
       items:
         - '[知识库](/wiki/)'
-        - '[项目](/projects/)'
-        - '[碎碎念](/notes/)'
-        - '[关于](/about/)'
+        - '[AI 工作流](/wiki/ai-workflow/)'
+        - '[服务器手札](/wiki/server-notes/)'
+        - '[建站笔记](/wiki/site-building/)'
+    - title: 探索
+      items:
+        - '[OKR & 手记](/notes/)'
+        - '[收藏夹](/notes/bookmark/)'
+        - '[服务器相关问题](/notes/server/)'
+        - '[在线工具](/notes/json/)'
+    - title: 关于
+      items:
+        - '[本站简介](/about/)'
+        - '[项目记录](/projects/)'
+        - '[社交入口](/friends/)'
+        - '[站点地图](/sitemap.xml)'
   content: |
-    © 2026 猫博士(縉紳)。本站由 Hexo 与 Stellar 生成，作为一间长期维护的赛博书房。
+    本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
 
 plugins:
   preload:
     enable: true
     service: flying_pages
   pjax:
-    enable: false
+    enable: true
+    selectors: ['title', '#l_cover', '.l_body']
+    timeout: 10000
+    cacheBust: false
+    translate-distance: 8px
   copycode:
     enable: true
     default_text: Copy
@@ -176,25 +185,30 @@ style:
     code: 85%
     codeblock: 0.8125rem
   font-family:
-    body: 'system-ui, "Microsoft Yahei", "Segoe UI", Arial, sans-serif'
+    body: '"LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", Arial, sans-serif'
     code: 'Menlo, Monaco, Consolas, system-ui, monospace, sans-serif'
     codeblock: 'Menlo, Monaco, Consolas, system-ui, monospace, sans-serif'
   text-align: left
   color:
-    theme: 'hsl(192 88% 48%)'
-    accent: 'hsl(38 90% 52%)'
-    link: 'hsl(207 82% 52%)'
+    theme: 'hsl(192 98% 55%)'
+    accent: 'hsl(14 100% 57%)'
+    link: 'hsl(207 90% 54%)'
+  animated_avatar:
+    animate: auto
+    background: https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp
+  codeblock:
+    scrollbar: 4px
+    highlightjs_theme: https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.9/build/styles/atom-one-dark.min.css
   leftbar:
-    background-color-light: var(--card)
-    background-color-dark: var(--card)
-    background-image:
-    blur-px: 80px
+    background-color: var(--card)
+    background-image: url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.13/image/sidebar-bg1@small.jpg)
+    blur-px: 100px
     blur-bg: var(--bg-a60)
-    background-opacity: 0.88
+    background-opacity: 0.8
   site:
-    blur-px: 80px
+    blur-px: 100px
     blur-bg: var(--bg-a75)
-    blur-sat: 180%
+    blur-sat: 300%
   header_prefix:
     h2: '#'
     h3: '='
@@ -202,7 +216,16 @@ style:
     h5: ':'
 
 default:
-  avatar: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
+  avatar: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg
   cover: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg
   image: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg
   banner: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg
+  loading: https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd
+
+dependencies:
+  jquery: https://res.xaox.cc/npm/jquery@3.7/dist/jquery.min.js
+  marked: https://res.xaox.cc/npm/marked@13.0/lib/marked.umd.min.js
+  lazyload:
+    js: https://res.xaox.cc/npm/vanilla-lazyload@19.1/dist/lazyload.min.js
+    transition: fade
+    fix_ratio: true

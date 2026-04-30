@@ -1,0 +1,75 @@
+recent:
+  layout: recent
+  rss: /atom.xml
+  limit: 10
+
+friends_nav:
+  layout: linklist
+  title: 社交
+  columns: 1
+  items:
+    - title: 小伙伴们
+      icon: social:friends
+      url: /friends/
+    - title: 关于本站
+      icon: social:about
+      url: /about/
+
+friends_manual:
+  layout: markdown
+  title: 友链申请手册
+  src: https://raw.githubusercontent.com/wenshuai/friends/main/README.md
+
+welcome_traveler:
+  layout: markdown
+  title: 欢迎，旅行者：
+  content: |
+    您已来到縉紳(jinshen) 的赛博书房。这里记录建站、AI 工具、服务器维护和日常手记。
+
+    > 内容会持续整理成博客、项目文档与探索笔记，适合慢慢翻阅。
+  linklist:
+    columns: 1
+    items:
+      - title: 查看本站简介
+        icon: solar:user-rounded-bold-duotone
+        url: /about/
+      - title: 传送到探索页
+        icon: solar:planet-bold-duotone
+        url: /notes/
+
+site_memo:
+  layout: timeline
+  title: 近期动态
+  nodes:
+    - date: 2026-04-29
+      content: |
+        每天一篇《縉紳的日常》已经导入文章列表，近期发布会持续按日期整理。
+    - date: 2026-04-29
+      content: |
+        知识库保留 AI 工作流、服务器手札和建站笔记，适合长期复用。
+    - date: 2026-04-29
+      content: |
+        搜索索引覆盖博客、知识库、探索和页面内容。
+
+blog_stats:
+  layout: markdown
+  title: 博客统计
+  content: |
+    <dl class="site-info-card">
+      <div><dt>上线</dt><dd title="2026-04-29">2026-04-29</dd></div>
+      <div><dt>文章</dt><dd>111 篇</dd></div>
+      <div><dt>专题</dt><dd>4 个</dd></div>
+      <div><dt>字数</dt><dd>约 2.7 万</dd></div>
+    </dl>
+
+tech_info:
+  layout: markdown
+  title: 技术信息
+  content: |
+    <dl class="site-info-card">
+      <div><dt>框架</dt><dd>Hexo 7.3</dd></div>
+      <div><dt>主题</dt><dd>Stellar 1.33</dd></div>
+      <div><dt>部署</dt><dd>Nginx</dd></div>
+      <div><dt>域名</dt><dd title="zblog.wenshuai.site">zblog</dd></div>
+      <div><dt>许可</dt><dd>CC BY-NC-SA</dd></div>
+    </dl>

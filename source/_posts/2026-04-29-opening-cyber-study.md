@@ -7,6 +7,7 @@ tags:
   - 知识管理
   - 赛博书房
 description: 这篇文章说明这个站为什么存在，以及它准备如何记录技术、AI 与长期笔记。
+cover: https://w.wallhaven.cc/full/vq/wallhaven-vqyrol.jpg
 ---
 
 这个站不是临时展示页，而是一张长期使用的桌面。

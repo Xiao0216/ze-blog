@@ -1,0 +1,29 @@
+title: 探索
+name: 探索
+description: OKR、手记、解决方案和在线工具入口。
+icon: https://api.iconify.design/solar:planet-bold-duotone.svg?color=%23FA6400
+base_dir: /notes/
+sort: 0
+menu_id: explore
+banner: https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706164631268.webp
+logo:
+  avatar: '[{config.avatar}](/about/)'
+  title: '[{config.title}](/)'
+  subtitle: 'Zodiac Zest | 本心热忱'
+leftbar: tree
+rightbar: toc
+search:
+  filter: auto
+tree:
+  探索:
+    - index
+    - bookmark/index
+  解决方案:
+    - mac/index
+    - ios/index
+    - flutter/index
+    - nodejs/index
+    - server/index
+  在线工具:
+    - json/index
+    - webp/index

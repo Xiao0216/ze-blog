@@ -1,0 +1,66 @@
+<%
+function layoutDiv() {
+  var el = '';
+  if (item.api == undefined && !Array.isArray(item.nodes)) {
+    return el;
+  }
+  function nodeText(value) {
+    if (!value) {
+      return '';
+    }
+    if (value instanceof Date) {
+      return value.toISOString().slice(0, 10);
+    }
+    return String(value);
+  }
+  el += `<widget class="widget-wrapper${scrollreveal(' ')} timeline">`
+    if (item.title) {
+      el += '<div class="widget-header dis-select">';
+      el += '<span class="name">' + item.title + '</span>';
+      el += '</div>';
+    }
+    el += '<div class="widget-body fs14">';
+    if (Array.isArray(item.nodes)) {
+      el += '<div class="tag-plugin timeline">';
+      item.nodes.forEach((node, i) => {
+        const title = nodeText(node.title || node.date || node.header);
+        const content = node.content || node.body || '';
+        el += '<div class="timenode" index="' + i + '">';
+        el += '<div class="header">';
+        if (title.length > 0) {
+          el += '<span>' + title + '</span>';
+        }
+        el += '</div>';
+        el += '<div class="body fs14">';
+        if (content.length > 0) {
+          el += markdown(content).split('\n').join('');
+        }
+        el += '</div>';
+        el += '</div>';
+      });
+      el += '</div>';
+    } else {
+      el += `<div class="tag-plugin timeline data-service ds-${(item.type || 'timeline')}"`;
+      // 动态遍历所有属性
+      const excludeKeys = ['title', 'type']; // 已用于其他用途的属性
+      const dataKeys = ['api']; // 需要添加 data- 前缀的属性
+      
+      Object.keys(item).forEach(key => {
+        if (excludeKeys.includes(key) || !item[key]) {
+          return;
+        }
+        if (dataKeys.includes(key)) {
+          el += ' data-' + key + '="' + item[key] + '"';
+        } else {
+          el += ' ' + key + '="' + item[key] + '"';
+        }
+      });
+      el += '>';
+      el += '</div>';
+    }
+    el += '</div>';
+  el += '</widget>';
+  return el;
+}
+%>
+<%- layoutDiv() %>

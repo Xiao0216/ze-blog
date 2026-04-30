@@ -8,6 +8,7 @@ tags:
   - Nginx
   - Cloudflare
 description: 第一版博客使用 Hexo 与 Stellar 生成静态站点，并通过 Nginx 与 Cloudflare 发布。
+cover: https://w.wallhaven.cc/full/1p/wallhaven-1pd6l1.png
 ---
 
 这个站点的第一版采用静态博客路线。

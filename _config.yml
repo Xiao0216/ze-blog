@@ -1,10 +1,10 @@
-title: 猫博士(縉紳)
-subtitle: 赛博书房里的技术、AI 与长期笔记
-description: 猫博士(縉紳) 的个人赛博书房，记录 AI 工具、服务器、自动化、建站和长期知识笔记。
-keywords: AI, 技术博客, 服务器, 自动化, Hexo, Stellar, 猫博士, 縉紳
-author: 猫博士(縉紳)
-avatar: https://api.iconify.design/solar:cat-bold-duotone.svg?color=%231bcdfc
-favicon: /favicon.svg
+title: 縉紳(jinshen)
+subtitle: 🐱的独立空间
+description: 縉紳(jinshen) 的个人生活空间，记录建站和长期知识笔记以及生活日常琐碎内容。
+keywords: AI, 技术/生活博客, 服务器, Hexo, Stellar, 猫博士, 縉紳, jinshen, 生活
+author: 縉紳(jinshen)
+avatar: /favicon.svg?v=cat-professor-round-20260429
+favicon: /favicon.svg?v=cat-professor-round-20260429
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -31,7 +31,7 @@ titlecase: false
 external_link:
   enable: true
   field: site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -41,16 +41,16 @@ syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 index_generator:
-  path: blog
+  path: ""
   per_page: 10
   order_by: -date
 archive_generator:
@@ -72,7 +72,7 @@ pagination_dir: page
 theme: stellar
 
 deploy:
-  type: ''
+  type: ""
 
 feed:
   type: atom
@@ -81,7 +81,7 @@ feed:
   hub:
   content: true
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
   icon: /favicon.svg
   autodiscovery: true

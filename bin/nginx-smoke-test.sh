@@ -51,10 +51,6 @@ home_headers="$(fetch_headers /)"
 assert_status "home" "$home_headers" "200"
 assert_header_contains "home cache" "$home_headers" "Cache-Control: no-cache"
 
-blog_headers="$(fetch_headers /blog/)"
-assert_status "blog index" "$blog_headers" "200"
-assert_header_contains "blog cache" "$blog_headers" "Cache-Control: no-cache"
-
 search_headers="$(fetch_headers /search.json)"
 assert_status "search index" "$search_headers" "200"
 assert_header_contains "search cache" "$search_headers" "Cache-Control: no-cache"

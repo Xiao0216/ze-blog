@@ -2,7 +2,7 @@
 title: 项目
 date: 2026-04-29 12:05:00
 layout: page
-menu_id: projects
+menu_id: wiki
 ---
 
 # 项目

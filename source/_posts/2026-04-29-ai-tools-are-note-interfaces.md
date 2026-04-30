@@ -7,6 +7,7 @@ tags:
   - 工作流
   - 知识管理
 description: 把 AI 当作笔记接口，而不是答案机器，会更容易建立可复用的工作流。
+cover: https://w.wallhaven.cc/full/3l/wallhaven-3l5lr3.jpg
 ---
 
 AI 工具最容易被误用成答案机器。答案当然重要，但更稳定的价值在于它改变了记录和整理的接口。
