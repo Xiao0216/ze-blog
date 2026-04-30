@@ -18,15 +18,15 @@ banner_info:
 <div class="tag-plugin colorful note">
   <div class="title"><strong><p>[持续同步] 朋友们的近况</p></strong></div>
   <div class="body">
-    <p>这里会按朋友们的 RSS 和文章更新时间展示最近动态。如果你也想把自己的窗口接进来，可以在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wenshuai/friends/issues">issue</a> 里留下站点名、地址、头像和 RSS，我会定期同步。</p>
+    <p>这里会按朋友们的 RSS 和文章更新时间展示最近动态。如果你也想把自己的窗口接进来，可以在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Xiao0216/ze-blog/issues/new/choose">issue</a> 里留下站点名、地址、头像和 RSS，我会定期同步。</p>
   </div>
 </div>
 
-<div class="tag-plugin users-posts-wrap"><div class="data-service ds-friends_and_posts" data-api="https://raw.githubusercontent.com/wenshuai/friends/main/output/v2/data.json"><div class="grid-box"></div></div></div>
+<div class="tag-plugin users-posts-wrap"><div class="data-service ds-friends_and_posts" data-api="https://raw.githubusercontent.com/Xiao0216/ze-blog/output/v2/data.json"><div class="grid-box"></div></div></div>
 
 <div class="tag-plugin colorful note">
   <div class="title"><strong><p>[链接维护] 搬家或短暂离线</p></strong></div>
   <div class="body">
-    <p>站点搬家、换域名或短暂离线都可以在原来的 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wenshuai/friends/issues">issue</a> 里留言。长期无法访问的链接会先隐藏，恢复后再放回列表。</p>
+    <p>站点搬家、换域名或短暂离线都可以在原来的 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Xiao0216/ze-blog/issues">issue</a> 里留言。长期无法访问的链接会先隐藏，恢复后再放回列表。</p>
   </div>
 </div>

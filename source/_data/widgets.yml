@@ -18,7 +18,7 @@ friends_nav:
 friends_manual:
   layout: markdown
   title: 友链申请手册
-  src: https://raw.githubusercontent.com/wenshuai/friends/main/README.md
+  src: https://raw.githubusercontent.com/Xiao0216/ze-blog/master/README.md
 
 welcome_traveler:
   layout: markdown
