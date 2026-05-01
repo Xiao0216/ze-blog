@@ -18,7 +18,47 @@ friends_nav:
 friends_manual:
   layout: markdown
   title: 友链申请手册
-  src: https://raw.githubusercontent.com/Xiao0216/ze-blog/master/README.md
+  content: |
+    **申请入口**
+
+    通过 [友链 Issue 模板](https://github.com/Xiao0216/ze-blog/issues/new/choose) 提交申请。站点搬家、换域名、换 RSS 或临时离线，也可以在原 Issue 下留言。
+
+    **申请前确认**
+
+    - 站点可公开访问，内容适合公开展示。
+    - 建议提供 RSS/Atom feed，方便展示最近文章。
+    - 没有 feed 也可以申请，但动态排序会靠后。
+    - 通过后，请把本站也添加到你的友链页。
+
+    **建议填写**
+
+    ```yaml
+    title: 站点名称
+    url: https://example.com
+    avatar: https://example.com/avatar.png
+    snapshot: https://example.com/
+    description: 一句话介绍你的站点
+    feed: https://example.com/atom.xml
+    ```
+
+    **本站信息**
+
+    ```yaml
+    title: 縉紳(jinshen)
+    url: https://zblog.wenshuai.site
+    avatar: https://zblog.wenshuai.site/favicon.svg?v=cat-professor-round-20260429
+    icon: https://zblog.wenshuai.site/favicon.svg?v=cat-professor-round-20260429
+    snapshot: https://zblog.wenshuai.site/
+    description: 縉紳(jinshen) 的个人生活空间，记录建站、长期知识笔记和生活日常。
+    feed: https://zblog.wenshuai.site/atom.xml
+    ```
+
+    **审核说明**
+
+    - 新申请会自动带上 `审核中` 标签。
+    - 移除 `审核中` 后，GitHub Actions 会同步到友链数据。
+    - `风险网站`、`失联`、`长期失联` 会从前端数据中排除。
+    - 信息变更请修改原 Issue 内容或在 Issue 下留言。
 
 welcome_traveler:
   layout: markdown
