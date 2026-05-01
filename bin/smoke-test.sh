@@ -131,7 +131,12 @@ assert_file_contains "pjax config" public/index.html "window.StellarPjaxConfig"
 assert_file_contains "pjax script" public/index.html "/js/plugins/pjax.js"
 assert_file_contains "pjax loading css" public/css/main.css "body.pjax-loading .page-loading-bar"
 assert_file_contains "home activity timeline widget" public/index.html '<widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">近期动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline">'
-assert_file_contains "home activity timeline node" public/index.html '<div class="timenode" index="0"><div class="header"><span>2026-04-29</span></div><div class="body fs14">'
+assert_file_contains "home overview timeline node" public/index.html '<div class="timenode" index="0"><div class="header"><span>站点概览</span></div><div class="body fs14">'
+assert_file_contains "home overview visit count" public/index.html 'id="busuanzi_value_site_pv"'
+assert_file_contains "home overview post count" public/index.html '<dt>文章数</dt>'
+assert_file_contains "home overview total words" public/index.html '<dt>总字数</dt>'
+assert_file_contains "home visit counter script" public/index.html 'busuanzi.pure.mini.js'
+assert_file_contains "home activity timeline node" public/index.html '<div class="timenode" index="1"><div class="header"><span>2026-04-29</span></div><div class="body fs14">'
 assert_not_contains "old activity markdown widget" '<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">近期动态</span>' public/index.html
 assert_contains "main css cache bust" "/css/main.css?v=20260429-xaoxuu-pjax1" public/index.html public/notes/index.html
 assert_not_contains "old main css cache bust" "/css/main.css?v=1.33.1" public/index.html public/notes/index.html
@@ -154,7 +159,7 @@ assert_file_contains "friends banner title" public/friends/index.html '<h1 class
 assert_file_contains "friends banner copy" public/friends/index.html '赛博书房外也有很多亮着灯的窗口'
 assert_file_contains "friends update note" public/friends/index.html '[持续同步] 朋友们的近况'
 assert_file_contains "friends issue copy" public/friends/index.html '如果你也想把自己的窗口接进来'
-assert_file_contains "friends posts datasource" public/friends/index.html 'class="data-service ds-friends_and_posts" data-api="https://raw.githubusercontent.com/wenshuai/friends/main/output/v2/data.json"'
+assert_file_contains "friends posts datasource" public/friends/index.html 'class="data-service ds-friends_and_posts" data-api="https://raw.githubusercontent.com/Xiao0216/ze-blog/output/v2/data.json"'
 assert_file_contains "friends lost contact note" public/friends/index.html '[链接维护] 搬家或短暂离线'
 assert_file_contains "friends restore copy" public/friends/index.html '恢复后再放回列表'
 assert_not_contains "friends old xaoxuu repo" "xaoxuu/friends" public/friends/index.html
