@@ -1,0 +1,19 @@
+services:
+  artalk:
+    image: artalk/artalk-go:latest
+    container_name: zblog-artalk
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:23366:23366"
+    volumes:
+      - ./data:/data
+    environment:
+      TZ: Asia/Shanghai
+      ATK_LOCALE: zh-CN
+      ATK_SITE_DEFAULT: zblog
+      ATK_SITE_URL: https://zblog.wenshuai.site
+      ATK_TRUSTED_DOMAINS: "https://zblog.wenshuai.site http://zblog.wenshuai.site http://127.0.0.1"
+      ATK_HTTP_PROXY_HEADER: X-Forwarded-For
+      ATK_DB_TYPE: sqlite
+      ATK_DB_FILE: /data/artalk.db
+      ATK_IMG_UPLOAD_PUBLIC_PATH: https://zblog.wenshuai.site/atk/static/images/
