@@ -12,3 +12,4 @@ package-lock.json.tmp
 __pycache__/
 *.pyc
 ops/artalk/data/
+ops/artalk/.env
