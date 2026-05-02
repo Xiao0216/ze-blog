@@ -19,7 +19,7 @@ services:
       ATK_IMG_UPLOAD_PUBLIC_PATH: https://zblog.wenshuai.site/atk/static/images/
       ATK_AUTH_ENABLED: ${ARTALK_AUTH_ENABLED:-false}
       ATK_AUTH_ANONYMOUS: ${ARTALK_AUTH_ANONYMOUS:-true}
-      ATK_AUTH_CALLBACK: https://zblog.wenshuai.site/atk/api/v2/auth/{provider}/callback
+      ATK_AUTH_CALLBACK: https://zblog.wenshuai.site/api/v2/auth/{provider}/callback
       ATK_AUTH_GITHUB_ENABLED: ${ARTALK_AUTH_GITHUB_ENABLED:-false}
       ATK_AUTH_GITHUB_CLIENT_ID: ${ARTALK_AUTH_GITHUB_CLIENT_ID:-}
       ATK_AUTH_GITHUB_CLIENT_SECRET: ${ARTALK_AUTH_GITHUB_CLIENT_SECRET:-}

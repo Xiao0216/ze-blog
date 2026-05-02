@@ -24,7 +24,7 @@ Create a GitHub OAuth App with these values:
 ```text
 Application name: zblog comments
 Homepage URL: https://zblog.wenshuai.site
-Authorization callback URL: https://zblog.wenshuai.site/atk/api/v2/auth/github/callback
+Authorization callback URL: https://zblog.wenshuai.site/api/v2/auth/github/callback
 ```
 
 Then create the local environment file:
