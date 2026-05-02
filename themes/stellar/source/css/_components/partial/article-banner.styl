@@ -77,3 +77,79 @@
   :root:not([data-theme]) &
     @media (prefers-color-scheme: dark)
       ondark()
+
+.l_body.content[layout=post] .article.banner.article-card-banner
+  margin: 0 1rem 1rem
+  padding: 1rem
+  border-radius: $border-card-l
+  background: var(--card)
+  overflow: hidden
+  z-index: 0
+  position: relative
+  --img-br: 100%
+  --img-sat: 100%
+  &:hover
+    --img-br: 75%
+    --img-sat: 120%
+  &:before
+    content: ''
+    position: absolute
+    inset: 0
+    z-index: 0
+    pointer-events: none
+    background-image: var(--card-cover)
+    background-size: cover
+    background-position: center
+    filter: blur(32px) saturate(130%)
+    opacity: .08
+    transform: scale(1.08)
+  >*
+    position: relative
+    z-index: 1
+  .post-cover
+    overflow: hidden
+    width: 'calc(100% + 2 * %s)' % 1rem
+    border-radius: 0
+    margin-left: -1rem
+    margin-top: -1rem
+    margin-right: -1rem
+    background: var(--block)
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      inset: 0
+      pointer-events: none
+      background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.12))
+    img
+      display: block
+      object-fit: cover
+      width: 100%
+      border-radius: 0
+      aspect-ratio: hexo-config('article.cover_ratio')
+      filter: brightness(var(--img-br)) saturate(var(--img-sat))
+      trans1 all
+  .content .top
+    margin: 1rem calc(1rem - 4px)
+  .content .bottom
+    margin: 0 calc(1rem - 4px)
+    padding-bottom: .25rem
+  .content .title
+    color: var(--text)
+  .content .subtitle
+    color: var(--text-p2)
+    font-size: $fs-14
+    line-height: 1.6
+    margin-top: .5rem
+  @media screen and (max-width: $device-mobile)
+    margin: 0 .5rem .75rem
+    padding: .5rem 1rem
+    .post-cover
+      width: 'calc(100% + 2 * %s)' % 1rem
+      margin-left: -1rem
+      margin-top: -.5rem
+      margin-right: -1rem
+    .content .top
+      margin: .75rem 0
+    .content .bottom
+      margin: 0

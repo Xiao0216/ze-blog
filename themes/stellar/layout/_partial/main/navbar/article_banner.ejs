@@ -1,13 +1,26 @@
 <%
 
 var banner = {}
+const isPostCoverCard = page.layout === 'post' && page.cover?.length > 0
+
+function imageUrl(src, size) {
+  if (src == null) {
+    return ''
+  }
+  if (src.includes('/')) {
+    return src
+  }
+  return `https://source.unsplash.com/${size}/?${src}`
+}
+
+const postCoverUrl = isPostCoverCard ? imageUrl(page.cover, '1280x640') : ''
 
 if (page.banner) {
-  banner.url = page.banner
+  banner.url = imageUrl(page.banner, '2000x400')
 } else if (theme.topic.tree[page.topic]?.banner != null) {
-  banner.url = theme.topic.tree[page.topic]?.banner
+  banner.url = imageUrl(theme.topic.tree[page.topic]?.banner, '2000x400')
 } else if (theme.wiki.tree[page.wiki]?.banner != null) {
-  banner.url = theme.wiki.tree[page.wiki]?.banner
+  banner.url = imageUrl(theme.wiki.tree[page.wiki]?.banner, '2000x400')
 }
 banner = Object.assign(banner, page.banner_info)
 // 标题
@@ -16,7 +29,7 @@ if (banner.title == null) {
 }
 // 副标题
 if (banner.subtitle == null) {
-  banner.subtitle = page.subtitle
+  banner.subtitle = page.subtitle || (isPostCoverCard ? page.description : undefined)
 }
 
 function layoutBreadcrumb() {
@@ -106,8 +119,16 @@ function layoutDiv() {
   }
   const top = layoutBreadcrumb()
   var style = ``
+  var outerStyle = ``
+  var cls = `article banner${isPostCoverCard ? ' article-card-banner' : ''}${scrollreveal(' ')} top`
   var el = ``
-  el += `<div class="article banner${scrollreveal(' ')} top">`
+  if (isPostCoverCard && postCoverUrl.length > 0) {
+    outerStyle = ` style="--card-cover:url('${postCoverUrl}')"`
+  }
+  el += `<div class="${cls}"${outerStyle}>`
+  if (isPostCoverCard && postCoverUrl.length > 0) {
+    el += `<div class="post-cover"><img src="${postCoverUrl}" alt=""></div>`
+  }
   if (banner.url?.length > 0) {
     el += `<img class="lazy bg" data-src="${banner.url}">`
     if (banner.color) {
