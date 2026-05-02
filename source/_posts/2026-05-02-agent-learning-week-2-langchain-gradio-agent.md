@@ -1,7 +1,9 @@
 ---
 title: Agent 学习周记 02：从命令行到英语学习 Agent
 date: 2026-05-02 09:45:00
-categories: AI 工具
+categories:
+  - 学习
+  - AI agent
 tags:
   - Agent
   - LangChain

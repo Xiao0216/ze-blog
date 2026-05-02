@@ -1,7 +1,9 @@
 ---
 title: Agent 学习周记 03：Prompt 不是咒语，是概率控制
 date: 2026-05-02 10:00:00
-categories: AI 工具
+categories:
+  - 学习
+  - AI agent
 tags:
   - Agent
   - Prompt

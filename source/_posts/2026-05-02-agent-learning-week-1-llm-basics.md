@@ -1,7 +1,9 @@
 ---
 title: Agent 学习周记 01：先把 LLM 看成一个预测器
 date: 2026-05-02 09:30:00
-categories: AI 工具
+categories:
+  - 学习
+  - AI agent
 tags:
   - Agent
   - LLM
