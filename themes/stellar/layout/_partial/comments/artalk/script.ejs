@@ -42,8 +42,19 @@
           });
         });
       }
-      
-      util.viewportLazyload(el, load_artalk, lazyload);
+
+      if (!lazyload || !("IntersectionObserver" in window)) {
+        load_artalk();
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio > 0) {
+          load_artalk();
+          observer.disconnect();
+        }
+      });
+      observer.observe(el);
     }
     
     // Store in global stellar namespace for PJAX reinitialization

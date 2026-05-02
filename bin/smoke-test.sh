@@ -130,6 +130,9 @@ assert_not_contains "sidebar footer rss entry" 'class="social" href="/atom.xml"'
 assert_file_contains "pjax config" public/index.html "window.StellarPjaxConfig"
 assert_file_contains "pjax script" public/index.html "/js/plugins/pjax.js"
 assert_file_contains "pjax loading css" public/css/main.css "body.pjax-loading .page-loading-bar"
+assert_contains "artalk container" "artalk_container" public/posts/2026/05/02/2026-05-02-agent-learning-week-3-prompt-engineering-part-1/index.html
+assert_contains "artalk init" "Artalk.init" public/posts/2026/05/02/2026-05-02-agent-learning-week-3-prompt-engineering-part-1/index.html
+assert_not_contains "artalk early util dependency" "util.viewportLazyload" public/posts/2026/05/02/2026-05-02-agent-learning-week-3-prompt-engineering-part-1/index.html
 assert_file_contains "home activity timeline widget" public/index.html '<widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">近期动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline">'
 assert_file_contains "home overview timeline node" public/index.html '<div class="timenode" index="0"><div class="header"><span>站点概览</span></div><div class="body fs14">'
 assert_file_contains "home overview visit count" public/index.html 'id="busuanzi_value_site_pv"'
