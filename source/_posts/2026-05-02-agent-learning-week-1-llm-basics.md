@@ -7,7 +7,7 @@ tags:
   - LLM
   - 学习记录
 description: 第一周先不急着谈 Agent，而是把 LLM 的底层直觉补齐：token、embedding、Transformer、训练、推理、采样和 API 调用。
-cover: /images/agent-learning/week1-llm-flow.png
+cover: /images/agent-learning/week1-cover.png
 ---
 
 这周学习 Agent，我没有一上来就看框架，也没有急着写一个“会自动干活”的 Demo。
@@ -135,6 +135,10 @@ LLM 基于上下文回答
 
 所以 Embedding 解决的不是“回答问题”，而是“怎么用语义相似把问题和资料连接起来”。
 
+![Token、Embedding 与向量检索的关系](/images/agent-learning/week1-token-embedding.png)
+
+这张图对应的是从 token 到向量检索的过程：编号本身没有语义，向量空间才让“相似内容”可以被找回来。
+
 ## Transformer：让每个 token 根据上下文重新定义自己
 
 Embedding 进入模型后，还只是孤立的语义坐标。真正让 token 带上上下文身份的是 Transformer，尤其是 Self-Attention。
@@ -227,6 +231,10 @@ Q 和 K 计算相关性
 ```
 
 这对 Agent 很关键。很多所谓“学习能力”，不一定要训练模型参数，而是管理外部状态和上下文。
+
+![训练和推理的区别](/images/agent-learning/week1-training-inference.png)
+
+训练会更新参数，推理只是在固定参数上做前向计算。Agent 的“记住用户”更多发生在外部记忆、上下文和数据库里。
 
 ## 随机性：模型输出为什么不总一样
 

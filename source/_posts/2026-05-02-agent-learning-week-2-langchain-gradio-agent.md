@@ -7,7 +7,7 @@ tags:
   - LangChain
   - 学习记录
 description: 第二周从一个最小 LLM 调用开始，逐步接上 Gradio、多轮对话、流式输出、语音输入输出和深度思考模式。
-cover: /images/agent-learning/week2-agent-flow.png
+cover: /images/agent-learning/week2-cover.png
 ---
 
 第一周补的是 LLM 底层直觉，第二周开始动手写应用。
@@ -252,6 +252,10 @@ Hello, I can help
 
 前端不断刷新，看起来就是模型在逐步输出。
 
+![多轮历史与流式输出链路](/images/agent-learning/week2-history-stream.png)
+
+多轮和流式其实是两层能力：历史管理解决“模型能不能看到上下文”，流式输出解决“用户能不能及时看到生成过程”。
+
 ## 第五步：接入语音输入和语音输出
 
 多模态版本把流程扩展成：
@@ -370,6 +374,10 @@ for chunk in chain_with_history.stream(...):
 ```
 
 工程上这里要特别小心：思考内容可以做前端展示，但不应该直接写进历史记忆。否则下一轮对话会把大量推理文本带回上下文，token 成本变高，还可能污染后续回答。
+
+![语音多模态与深度思考链路](/images/agent-learning/week2-multimodal-thinking.png)
+
+语音版并不是换掉原来的文本链路，而是在 LLM 前后接入 ASR 和 TTS；深度思考则是在模型调用和输出处理上多了一条更慢、更重的分支。
 
 ## 为什么它还只是 Agent 雏形
 

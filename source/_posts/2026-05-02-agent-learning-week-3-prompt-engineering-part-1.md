@@ -8,7 +8,7 @@ tags:
   - LLM
   - 学习记录
 description: 第三周上篇开始学 Prompt Engineering：Prompt 不是魔法，而是在概率模型外面做结构化约束。
-cover: /images/agent-learning/week3-prompt-flow.png
+cover: /images/agent-learning/week3-cover.png
 ---
 
 学完 Week 2 的英语学习 Agent 雏形后，我进入了 Prompt Engineering。
@@ -323,6 +323,10 @@ CO-STAR 更像写给一个专业协作者。
 RTF 更像定义一个可编排的系统模块。
 ```
 
+![CO-STAR 与 RTF 的使用场景对比](/images/agent-learning/week3-costar-rtf.png)
+
+CO-STAR 更关心背景、受众和表达质量；RTF 更关心角色、任务和格式，适合放进 Agent 的自动化节点里。
+
 ## 分隔符和变量占位符很重要
 
 工程化 Prompt 不能把所有内容糊成一段。
@@ -403,5 +407,9 @@ Prompt 能让模型更可能走向正确轨道，但真正可靠的系统还需�
 人工确认
 监控评估
 ```
+
+![Prompt 边界与工程控制](/images/agent-learning/week3-prompt-boundaries.png)
+
+Prompt 负责引导模型，工程系统负责兜住边界。越接近权限、金额、状态变更和安全策略，越不能只靠自然语言约束。
 
 第三周目前先学到这里。下一步应该继续看零样本、少样本、思维链和结构化输出，把 Prompt 从“写得清楚”推进到“可测试、可迭代、可接入系统”。
